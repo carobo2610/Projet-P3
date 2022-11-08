@@ -1,0 +1,134 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+h1, h6 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  background-color: #f0f3f5;
+}
+
+body {
+  margin: auto;
+  box-sizing: border-box;
+  max-width: 1400px;
+}
+
+.fonctionnement, .restaurants {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.restaurants__img--img {
+  width: 100%;
+  height: 200px;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+}
+.header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*bouton "explorer nos restaurants" main page */
+header, h1 {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  text-decoration: none;
+}
+header .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location {
+  background-color: #cbc6c6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.location, #location__search, #location__form, i {
+  border: none;
+  background-color: #cbc6c6;
+  height: 18px;
+}
+
+/* mettre en form scss*/
+input::placeholder {
+  color: black;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.reservation {
+  background-color: #ecedf1;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.reservation__title {
+  padding: 20px 30px;
+  font-weight: bold;
+}
+.reservation__sub {
+  padding: 0px 20px;
+  color: grey;
+}
+.reservation__input {
+  background-image: linear-gradient(#ff79da, #9356dc);
+  border: none;
+  border-radius: 50px;
+  padding: 13px 18px;
+  margin-top: 25px;
+  color: white;
+}
+
+.fonctionnement {
+  padding-top: 40px;
+}
+.fonctionnement__title {
+  font-weight: bold;
+}
+.fonctionnement__steps {
+  margin-bottom: 50px;
+}
+.fonctionnement__step {
+  display: flex;
+  align-items: center;
+  gap: 0px 20px;
+  border: 1px solid grey;
+  border-radius: 50px;
+  box-shadow: 0px 1px 1px grey;
+  padding: 15px 15px 15px 0px;
+  margin-top: 20px;
+}
+.fonctionnement__number {
+  border: 1px solid #9356DC;
+  border-radius: 100px;
+  padding: 5px 11px;
+  background-color: #9356DC;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
