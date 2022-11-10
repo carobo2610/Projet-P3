@@ -35,10 +35,19 @@ h5 {
 body {
   margin: auto;
   box-sizing: border-box;
-  max-width: 1400px;
+  max-width: 768px;
+  width: auto;
+}
+@media screen and (min-width: 768px) {
+  body {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1440px;
+  }
 }
 
-.fonctionnement, .restaurants {
+.fonctionnement, .restaurants, .footer {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -62,47 +71,15 @@ i {
   background-color: none;
 }
 
-/*bouton "explorer nos restaurants" main page */
-footer {
-  color: white;
-  background-color: rgb(78, 75, 75);
-  padding: 3px 0px;
-  padding: 0px 0px 20px 20px;
-  width: 100%;
-  color: white;
-  background-color: rgb(78, 75, 75);
-  padding: 3px 0px;
+@media screen and (min-width: 768px) {
+  .restaurants__card {
+    width: 25%;
+    max-width: 1400px;
+  }
+  .fonctionnement__title, .restaurants__title {
+    text-align: center;
+  }
 }
-footer__title {
-  font-size: 18px;
-  padding: 10px 0px;
-}
-footer__propose {
-  display: flex;
-  gap: 0px 15px;
-}
-footer__partenaire {
-  display: flex;
-  gap: 0px 8px;
-}
-
-header {
-  background-color: white;
-  padding: 5px 0px;
-  width: 100%;
-  text-decoration: none;
-}
-header .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header .header h1 {
-  display: flex;
-  align-items: center;
-  color: black;
-}
-
 .location {
   background-color: #cbc6c6;
   display: flex;
@@ -128,6 +105,23 @@ input::placeholder {
   color: black;
   padding-left: 10px;
   font-size: 18px;
+}
+
+header {
+  background-color: white;
+  padding: 5px 0px;
+  width: 100%;
+  text-decoration: none;
+}
+header .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header h1 {
+  display: flex;
+  align-items: center;
+  color: black;
 }
 
 .reservation {
@@ -161,7 +155,6 @@ input::placeholder {
 
 .fonctionnement {
   padding-top: 40px;
-  text-decoration: none;
 }
 .fonctionnement__title {
   font-weight: bold;
@@ -169,14 +162,20 @@ input::placeholder {
 .fonctionnement__steps {
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
-  /*flex-direction row pour 992 et 1400*/
+  margin: 40px 0px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__steps {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1440px;
+  }
 }
 .fonctionnement__step {
   display: flex;
   align-items: center;
   gap: 0px 20px;
-  border: transparent;
   background-color: rgb(245, 245, 245);
   border-radius: 50px;
   box-shadow: 0px 1px 1px grey;
@@ -206,15 +205,22 @@ input::placeholder {
   color: grey;
 }
 
-.restaurants__cards {
+.restaurants__cards, .restaurants a {
   display: flex;
   flex-direction: column;
   gap: 15px 20px;
   padding: 20px 0px;
-  margin-bottom: 40px;
-  /* wrap pour 992 avec max width à 700px pour que 
-  les cards soient en 2x2
-  flex-direction: row pour 1400*/
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__cards, .restaurants a {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    max-width: 1440px;
+    margin: 40px 0px;
+  }
 }
 .restaurants__card {
   border: 1px solid rgb(239, 235, 235);
@@ -222,7 +228,7 @@ input::placeholder {
   border-radius: 15px;
   background-color: white;
   position: relative;
-  /*desktop 20% de 1440*/
+  width: 100%;
 }
 .restaurants__img--img {
   position: relative;
@@ -250,6 +256,44 @@ input::placeholder {
   justify-content: space-between;
   padding: 10px;
   color: black;
+}
+
+.footer {
+  color: white;
+  background-color: rgb(78, 75, 75);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.footer__title {
+  font-size: 25px;
+  padding: 10px 0px;
+}
+.footer__propose {
+  display: flex;
+  gap: 0px 15px;
+  padding: 4px 0px;
+}
+.footer__partenaire {
+  display: flex;
+  gap: 0px 8px;
+  padding: 4px 0px;
+}
+.footer__mention {
+  padding: 4px 0px;
+}
+.footer__contact, .footer a {
+  text-decoration: none;
+  color: white;
+  padding: 4px 10px 0px 0px;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1440px;
+  }
 }
 
 .image_palette {
@@ -290,26 +334,6 @@ input::placeholder {
   padding: 10px;
 }
 
-.footer {
-  color: white;
-  background-color: rgb(78, 75, 75);
-  padding: 3px 0px;
-  padding: 0px 0px 20px 20px;
-  width: 100%;
-}
-.footer__title {
-  font-size: 18px;
-  padding: 10px 0px;
-}
-.footer__propose {
-  display: flex;
-  gap: 0px 15px;
-}
-.footer__partenaire {
-  display: flex;
-  gap: 0px 8px;
-}
-
 .starters__check, .maincourse__check, .deserts__check {
   display: none;
 }
@@ -336,12 +360,12 @@ input::placeholder {
   text-transform: uppercase;
 }
 
-.starters {
+.starters, .deserts, .maincourse {
   display: flex;
   flex-direction: column;
   gap: 15px 20px;
 }
-.starters__choice {
+.starters__choice, .deserts__choice, .maincourse__choice {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -351,32 +375,7 @@ input::placeholder {
   border-radius: 15px;
   background-color: white;
 }
-.starters__price {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  font-weight: bold;
-  font-size: 15px;
-}
-.maincourse {
-  display: flex;
-  flex-direction: column;
-  gap: 15px 20px;
-}
-.maincourse__title {
-  padding-left: 30px; /*pour écarter le nom du bord*/
-}
-.maincourse__choice {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  padding: 10px;
-  border: 1px solid rgb(239, 235, 235);
-  box-shadow: 1px 5px 3px 0px rgb(200, 194, 194);
-  border-radius: 15px;
-  background-color: white;
-}
-.maincourse__price {
+.starters__price, .deserts__price, .maincourse__price {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -384,27 +383,9 @@ input::placeholder {
   font-size: 15px;
 }
 
-.deserts {
-  display: flex;
-  flex-direction: column;
-  gap: 15px 20px;
-}
-.deserts__choice {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  padding: 10px;
-  border: 1px solid rgb(239, 235, 235);
-  box-shadow: 1px 5px 3px 0px rgb(200, 194, 194);
-  border-radius: 15px;
-  background-color: white;
-}
-.deserts__price {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  font-weight: bold;
-  font-size: 15px;
+/*pour écarter le nom "plats" du bord*/
+.maincourse__title {
+  padding-left: 30px;
 }
 
 .command {
@@ -424,6 +405,44 @@ input::placeholder {
   opacity: 0.8;
   transition: 0.3s;
   box-shadow: 0px 10px 10px 0px rgba(160, 156, 156, 0.6);
+}
+
+.footer {
+  color: white;
+  background-color: rgb(78, 75, 75);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.footer__title {
+  font-size: 25px;
+  padding: 10px 0px;
+}
+.footer__propose {
+  display: flex;
+  gap: 0px 15px;
+  padding: 4px 0px;
+}
+.footer__partenaire {
+  display: flex;
+  gap: 0px 8px;
+  padding: 4px 0px;
+}
+.footer__mention {
+  padding: 4px 0px;
+}
+.footer__contact, .footer a {
+  text-decoration: none;
+  color: white;
+  padding: 4px 10px 0px 0px;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1440px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
