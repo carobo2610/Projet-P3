@@ -1,0 +1,9 @@
+@media screen and (min-width: map-get($breakpoints,mobile)){
+.restaurants__card{
+    width: 25%;
+    max-width: 1400px;
+}
+.fonctionnement__title, .restaurants__title{
+    text-align: center;
+}
+}

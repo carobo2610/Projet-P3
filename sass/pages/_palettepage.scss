@@ -1,0 +1,76 @@
+.image_palette{
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.header{
+    position: relative;
+    z-index: 10;
+    @include header;
+    &__return{
+        position: absolute;
+        z-index: 11;
+        top: 20px;
+        left: 20px;
+    }
+}
+.fa-arrow-left{
+    border: transparent;
+    background-color: white;
+    color: rgb(64, 63, 63);
+    padding: 10px;
+}
+
+
+.starters__check, .maincourse__check, .deserts__check{
+    display: none;
+}
+.menu{
+    position: relative;
+    border:1px solid $bg-main;
+    background-color: $bg-main;
+    border-radius: 30px 30px 0px 0px;
+    padding: 0px 20px;
+    margin-top: -50px;
+    &__title{
+        @include restaurants_name;
+    }
+}
+
+.courses{
+    padding: 30px 0px 0px 0px;
+    color: grey;
+    text-transform: uppercase;
+}
+
+.starters, .deserts, .maincourse{
+   @include flex_column;
+    &__choice{
+        @include menu_choices_display;
+        @include border-box;
+    }
+    &__price{
+        @include prices;
+    }
+}
+
+/*pour écarter le nom "plats" du bord*/
+.maincourse__title{
+    padding-left: 30px; 
+}
+
+.command{
+    display: flex;
+    margin:auto;
+    margin-bottom: 25px;
+    @include buttons_style;
+    &:hover{
+        @include buttons_hover;
+    }
+}
+.footer{
+    @include footer;
+    @include tablette;
+}
+    
