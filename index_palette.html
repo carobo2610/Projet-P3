@@ -16,11 +16,12 @@
         <title>OhMyFood</title>
 </head>        
 <body>
-     <main>  
+    <main>  
         <header>
             <div class="header">
              <h1>ohmyfood</h1>
-             <button class="header__return"><i class="fa-solid fa-arrow-left"></i> 
+             <button class="header__return">
+                <i class="fa-solid fa-arrow-left"></i>
              <a href="index.html"></a></button>
             </div>
         </header>
@@ -29,129 +30,123 @@
             <img class="image_palette" src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="vue sur un plat de poisson">
         </section>
 
-        <section class="menu">
-                <div class="menu__title">
-                     <h1>La palette du goût</h1>
-                     <i class="fa-regular fa-heart halfHeart"></i>
-                </div>
-
+        <section class="restaurant">
+            <div class="restaurant__title">
+                <h1>La palette du goût</h1>
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="menu">
                 <div class="starters">
-                    <div class="starters__greenline"><p class="courses">entrées</p></div>
+                    <div class="starters__title">entrées
+                        <div class="starters__title--greenline"></div>
+                    </div>
+                    
                     <div class="starters__choice">
-                        <div class="starters__infos">
-                            <h4 class="starters__infos--name">Fricassée d'escargot</h4>
-                            <h5 class="starters__descrption--descr">Au piment d'Espelette</h5>
+                        <div class="starters__choice--infos">
+                            <h4 class="starters__choice--name">Fricassée d'escargot</h4>
+                            <h5 class="starters__choice--descr">Au piment d'Espelette</h5>
                         </div>
-                        <div class="starters__price">25€</div>
-                        <div class="starters__check">
-                            <i class="fa-regular fa-circle-check"></i>  
+                        <div class="starters__choice--price">25€</div>
+                        <div class="starters__choice--check">
+                            <i class="fa-solid fa-check"></i> 
                         </div>
                     </div>
                     <div class="starters__choice">
-                        <div class="starters__infos">
-                            <h4 class="starters__infos--name">Foie gras de canard mi-cuit</h4>
-                            <h5 class="starters__descrption--descr">Et ses copeaux de truffe noire</h5>
+                        <div class="starters__choice--infos">
+                            <h4 class="starters__choice--name">Foie gras de canard mi-cuit</h4>
+                            <h5 class="starters__choice--descr">Et ses copeaux de truffe noire</h5>
                         </div>
-                        <div class="starters__price">35€</div>
-                        <div class="starters__check">
-                            <i class="fa-regular fa-circle-check"></i>  
+                        <div class="starters__choice--price">35€</div>
+                        <div class="starters__choice--check">
+                            <i class="fa-solid fa-check"></i>  
                         </div>
                     </div>
 
                     <div class="starters__choice">
-                        <div class="starters__infos">
-                            <h4 class="starters__infos--name">Œuf au plat</h4>
-                            <h5 class="starters__descrption--descr">Assaisonné à la truffe sur lit de caviar</h5>
+                        <div class="starters__choice--infos">
+                            <h4 class="starters__choice--name">Œuf au plat</h4>
+                            <h5 class="starters__choice--descr">Assaisonné à la truffe sur lit de caviar</h5>
                         </div>
-                        <div class="starters__price">20€</div>
-                        <div class="starters__check">
-                            <i class="fa-regular fa-circle-check"></i>  
+                        <div class="starters__choice--price">20€</div>
+                        <div class="starters__choice--check">
+                            <i class="fa-solid fa-check"></i>  
                         </div>
                     </div>
                 </div>
 
                 <div class="maincourse">
-                    <div class="maincourse__green-line"><p class="courses"><span class="maincourse__title">plats</span></p></div>
+                    <div class="maincourse__title">plats
+                        <div class="starters__title--greenline"></div>
+                    </div>
                     <div class="maincourse__choice">
-                        <div class="maincourse__infos">
-                            <h4 class="maincourse__infos--name">Filet de boeuf aux herbes</h4>
-                            <h5 class="maincourse__infos--descr">Accompagné de sa ribambelle de légumes</h5>
+                        <div class="maincourse__choice--infos">
+                            <h4 class="maincourse__choice--name">Filet de boeuf aux herbes</h4>
+                            <h5 class="maincourse__choice--descr">Accompagné de sa ribambelle de légumes</h5>
                         </div>
-                        <div class="maincourse__price">
-                            <p class="maincourse__price--euro">40€</p>
-                        </div>
-                        <div class="maincourse__check">
-                            <i class="fa-regular fa-circle-check"></i>  
+                        <div class="maincourse__choice--price">40€</div>
+                        <div class="maincourse__choice--check">
+                            <i class="fa-solid fa-check"></i>  
                         </div>
                     </div>
                     <div class="maincourse__choice">
-                        <div class="maincourse__infos">
-                            <h4 class="maincourse__infos--name">Parmentier de queue de boeuf</h4>
-                            <h5 class="maincourse__infos--descr">À la truffe noire sur sa purée de panais</h5>
+                        <div class="maincourse__choice--infos">
+                            <h4 class="maincourse__choice--name">Parmentier de queue de boeuf</h4>
+                            <h5 class="maincourse__choice--descr">À la truffe noire sur sa purée de panais</h5>
                         </div>
-                        <div class="maincourse__price">
-                            <p class="maincourse__price--euro">35€</p>
-                        </div>
-                        <div class="maincourse__check">
-                            <i class="fa-regular fa-circle-check"></i>  
+                        <div class="maincourse__choice--price">35€</div>
+                        <div class="maincourse__choice--check">
+                            <i class="fa-solid fa-check"></i>  
                         </div>
                     </div>
                     <div class="maincourse__choice">
-                        <div class="maincourse__infos">
-                            <h4 class="maincourse__infos--name">Filet de turbot</h4>
-                            <h5 class="maincourse__infos--descr">Aux agrumes</h5>
+                        <div class="maincourse__choice--infos">
+                            <h4 class="maincourse__choice--name">Filet de turbot</h4>
+                            <h5 class="maincourse__choice--descr">Aux agrumes</h5>
                         </div>
-                        <div class="maincourse__price">
-                            <p class="maincourse__price--euro">44€</p>
-                        </div>
-                        <div class="maincourse__check">
-                            <i class="fa-regular fa-circle-check"></i>  
+                        <div class="maincourse__choice--price">44€</div>
+                        <div class="maincourse__choice--check">
+                            <i class="fa-solid fa-check"></i>  
                         </div>
                     </div>
                 </div> 
                 <div class="deserts">
-                    <div class="deserts__green-line"><p class="courses">desserts</p></div>
+                    <div class="deserts__title">desserts
+                        <div class="deserts__title--greenline"></div>
+                    </div>
                     <div class="deserts__choice">
-                        <div class="deserts__infos">
-                            <h4 class="deserts__infos--name">Paris-Brest</h4>
-                            <h5 class="deserts__infos--descr">Revisité</h5>
+                        <div class="deserts__choice--infos">
+                            <h4 class="deserts__choice--name">Paris-Brest</h4>
+                            <h5 class="deserts__choice--descr">Revisité</h5>
                         </div>
-                        <div class="deserts__price">
-                            <p class="deserts__price--euro">18€</p>
-                        </div>
-                        <div class="deserts__check">
-                            <i class="fa-regular fa-circle-check"></i>  
+                        <div class="deserts__choice--price">18€</div>
+                        <div class="deserts__choice--check">
+                            <i class="fa-solid fa-check"></i>  
                         </div>
                     </div>  
                     <div class="deserts__choice">
-                        <div class="deserts__infos">
-                            <h4 class="deserts__infos--name">Macaron au chocolat d'exception </h4>
-                            <h5 class="deserts__infos--descr">Et glace à la vanille de Madagascar</h5>
+                        <div class="deserts__choice--infos">
+                            <h4 class="deserts__choice--name">Macaron au chocolat d'exception </h4>
+                            <h5 class="deserts__choice--descr">Et glace à la vanille de Madagascar</h5>
                         </div>
-                        <div class="deserts__price">
-                            <p class="deserts__price--euro">22€</p>
-                        </div>
-                        <div class="deserts__check">
-                            <i class="fa-regular fa-circle-check"></i>  
+                        <div class="deserts__choice--price">22€</div>
+                        <div class="deserts__choice--check">
+                            <i class="fa-solid fa-check"></i>  
                         </div>
                     </div>  
                     <div class="deserts__choice">
-                        <div class="deserts__infos">
-                            <h4 class="deserts__infos--name">Mousse au chocolat</h4>
-                            <h5 class="deserts__infos--descr">Au piment d'Espelette et à la truffe noire</h5>
+                        <div class="deserts__choice--infos">
+                            <h4 class="deserts__choice--name">Mousse au chocolat</h4>
+                            <h5 class="deserts__choice--descr">Au piment d'Espelette et à la truffe noire</h5>
                         </div>
-                        <div class="deserts__price">
-                            <p class="deserts__price--euro">23€</p>
-                        </div>
-                        <div class="deserts__check">
-                            <i class="fa-regular fa-circle-check"></i>  
+                        <div class="deserts__choice--price">23€</div>
+                        <div class="deserts__choice--check">
+                            <i class="fa-solid fa-check"></i>  
                         </div>
                     </div> 
                 </div>  
-                <input class="command" type="button" value="Commander">   
+            </div>    
+            <input class="command" type="button" value="Commander">   
         </section>  
-           
-        
     </main>
     <footer class="footer">
         <h6 class="footer__title">ohmyfood</h6>
