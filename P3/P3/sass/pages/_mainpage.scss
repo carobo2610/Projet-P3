@@ -1,0 +1,116 @@
+header{
+    @include header;
+ }
+.reservation{
+    background-color: $bg-reservation;
+    text-align: center; 
+    padding-bottom: 30px;
+    &__title{
+        padding: 20px 30px;
+        font-weight: bold;
+    }
+    &__sub{
+        padding: 0px 20px;
+        color: grey;
+    }
+    &__input{
+        @include buttons_style;
+        &:hover{
+            @include buttons_hover;
+        }
+}
+}
+.fonctionnement{
+    padding-top: 40px;
+    
+    &__title{
+        font-weight: bold;
+    }
+    &__steps{
+        display: flex;
+        flex-direction: column;
+        margin:40px 0px;
+        @include tablette;
+
+    }
+    &__step{
+        display: flex;
+        align-items: center;
+        gap: 0px 20px;
+        background-color:$bg-fonctionnement;
+        border-radius: 50px;
+        box-shadow: 0px 1px 1px grey ;
+        padding: 15px 15px 15px 0px;
+        margin-top: 20px;
+        &:hover{
+            @include buttons_hover;
+            background:lighten($primary,32%);
+            & .fa-list-dots,.fa-mobile-screen-button,.fa-store{
+                color: $primary;
+            }
+        }
+    }
+    &__number{
+        border:1px solid $primary ;
+        background-color: $primary;
+        color: white;
+        margin-left: -15px;
+        border-radius: 100px;
+        padding:2px 8px;
+    }
+}
+
+.fa-list-dots,.fa-mobile-screen-button,.fa-store{
+    color: grey;
+}
+
+.restaurants{
+    &__cards, a{
+        @include flex_column;
+        padding: 20px 0px;
+        width: 100%;
+        @include cards; 
+    }
+    &__card{
+        @include border-box;
+        position: relative;
+        background-color: $bg-main;
+        width: 100%; 
+    }
+    &__img--img{
+        position: relative;
+        object-fit: cover;
+        z-index: 10;
+        border-radius:20px 20px 0px 0px;
+    }
+    &__maj{
+        border: 1px solid $tertiary;
+        background-color: $tertiary;
+        border-radius: 2px;
+        color: rgb(20, 111, 20);
+        font-weight: bold;
+        font-size: 13px;
+        width:70px;
+        text-align: center;
+        padding: 3px;
+        z-index: 11;
+        position: absolute;
+        top:20px;       /*position de la div nouveau sur l'image */
+        right: 20px;
+    }
+  
+    &__infos{
+        display: flex;
+        justify-content: space-between ;
+        align-items: center;
+        padding:10px 0px 10px 10px;
+        color: black;
+        border-radius: 0px 0px 20px 20px;
+        
+    } 
+    
+}
+.footer{
+    @include footer;
+    @include tablette;
+}
