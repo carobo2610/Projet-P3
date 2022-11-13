@@ -16,27 +16,28 @@
     <title>OhMyFood</title>
 </head>
 <body>
-    <main>   <!-- loader de 3 cercles pleins qui tournent -->
+       <!-- loader de 3 cercles pleins qui tournent -->
+       
         <div class="loader">
-            <div class="loader">
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-            </div>
-        </div>
-
+            <div class="loader__dot1"></div>
+            <div class="loader__dot2"></div>
+            <div class="loader__dot3"></div>
+         </div> 
+    <main>
         <header>
             <div class="header">
-               <a href="index.html"><h1 class="logo">ohmyfood</h1></a>
+                <a href="index.html">
+                    <h1 class="logo">ohmyfood</h1>
+                </a>
             </div>
         </header>
 
-        <section class="location">
+        <div class="location">
             <i class="fa-solid fa-location-dot"></i>
-            <form id="location__form" method="post" action="">
+            <form id="location__form" method="post" action="#">
                 <input type="search" name="location" id="location__search" placeholder="Paris, Belleville">
             </form>
-        </section>
+        </div>
         
         <section class="reservation">
             <h2 class="reservation__title">Réservez le menu qui vous convient</h2>
@@ -82,7 +83,7 @@
                                 <h5 class="restauants__text--ville">Ménilmontant</h5>
                             </div>    
                             <div class="restaurants__favorit">
-                                <i class="fa-regular fa-heart halfHeart"></i>
+                                <i class="fas fa-heart"></i>
                             </div>   
                         </div>
                     </div>    
@@ -99,7 +100,7 @@
                                 <h5 class="restauants__text--ville">Charonne</h5>
                             </div>    
                             <div class="restaurants__favorit">
-                                <i class="fa-regular fa-heart halfHeart"></i>
+                                <i class="fas fa-heart"></i>
                             </div>   
                         </div>
                     </div>    
@@ -115,7 +116,7 @@
                                 <h5 class="restauants__text--ville">Cité rouge</h5>
                             </div>    
                             <div class="restaurants__favorit">
-                                <i class="fa-regular fa-heart halfHeart"></i>
+                                <i class="fas fa-heart"></i>
                             </div>   
                         </div>
                     </div>    
@@ -131,7 +132,7 @@
                                 <h5 class="restauants__text--ville">Folie-Méricourt</h5>
                             </div>    
                             <div class="restaurants__favorit">
-                                <i class="fa-regular fa-heart halfHeart"></i>                        
+                                <i class="fas fa-heart"></i>                        
                             </div>   
                         </div>
                     </div>    
