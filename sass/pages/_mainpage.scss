@@ -1,3 +1,35 @@
+.loader{
+    position: fixed;
+    z-index: 20;
+    inset: 0;
+    background: white;
+    height: 100vh;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: disappear 0.5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transform-origin: top;
+
+&__dot1{
+    @include loader_dots;
+    background: $primary;
+    animation-delay: 0s;
+    }
+&__dot2{
+    @include loader_dots;
+    background: $secondary;
+    animation-delay: 0.2s;
+    }
+&__dot3{
+    @include loader_dots;
+    background: $tertiary;
+    animation-delay: 0.3s;
+    }
+}
+
 header{
     @include header;
  }
@@ -18,11 +50,10 @@ header{
         &:hover{
             @include buttons_hover;
         }
-}
+    }
 }
 .fonctionnement{
     padding-top: 40px;
-    
     &__title{
         font-weight: bold;
     }
@@ -31,7 +62,6 @@ header{
         flex-direction: column;
         margin:40px 0px;
         @include tablette;
-
     }
     &__step{
         display: flex;
@@ -69,12 +99,13 @@ header{
         @include flex_column;
         padding: 20px 0px;
         width: 100%;
-        @include cards;
+        @include cards; 
     }
     &__card{
         @include border-box;
         position: relative;
-        width: 100%;
+        background-color: $bg-main;
+        width: 100%; 
     }
     &__img--img{
         position: relative;
@@ -97,13 +128,15 @@ header{
         top:20px;       /*position de la div nouveau sur l'image */
         right: 20px;
     }
-  
     &__infos{
         display: flex;
         justify-content: space-between ;
-        padding:10px;
+        align-items: center;
+        padding:10px 0px 10px 10px;
         color: black;
+        border-radius: 0px 0px 20px 20px;
     } 
+    
 }
 .footer{
     @include footer;
