@@ -41,7 +41,6 @@
     color: white;
     font-weight: bold;
 }
-
 @mixin buttons_hover{
     cursor: pointer;
     opacity: 0.8;
@@ -156,6 +155,7 @@ pour la partie steps fonctionnement du main */
         transform:scale(0);
     }
 }
+
 /*animations*/
 @keyframes appear{
  0%{

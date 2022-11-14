@@ -6,22 +6,26 @@
 .fonctionnement__title, .restaurants__title{
     text-align: center;
 }
-
 .restaurant__title, p{
    margin: auto;
 }
 }
+
 @media screen and (min-width: map-get($breakpoints,mobile)) 
 and (max-width: map-get($breakpoints,tablette)){
 .restaurants__card{
     height: 263px;
 }
 .starters, .deserts, .maincourse{
-    max-width: 314px;
+    &__choice{
+    width: 350px;
     }
-}
+}}
+
 @media screen and (min-width: map-get($breakpoints,tablette)){
 .starters, .deserts, .maincourse{
-    max-width: 314px;
+    &__choice{
+    width: 350px;
     }
+}
 }

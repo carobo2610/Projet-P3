@@ -12,7 +12,6 @@
     animation-delay: 2s;
     animation-fill-mode: forwards;
     transform-origin: top;
-
 &__dot1{
     @include loader_dots;
     background: $primary;
