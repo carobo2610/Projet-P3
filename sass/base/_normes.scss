@@ -8,6 +8,7 @@
 *a{
     text-decoration: none;
 }
+
 body{
     margin: auto;
     box-sizing: border-box;
@@ -33,9 +34,11 @@ body{
         @include flexbox_center;
     }
 }
+
 i{
     background-color: none;
 }
+
 /*taille des images des restaurants*/
 .image_palette,.image_enchantee, .image_delice, .image_francaise{
     width: 100%;

@@ -1,17 +1,18 @@
+/*page principale*/
 .loader{
     position: fixed;
-    z-index: 20;
-    inset: 0;
+    z-index: 20; /* index élevé pour être sur qu'il recouve tous les éléments de la pages*/
+    inset: 0; /* pour partir de tous les bords de la page sans margin*/
     background: white;
-    height: 100vh;
-    opacity: 0.9;
+    height: 100vh; /* pour qu'il prenne toute la hauteur de la page*/
+    opacity: 0.9; /* rendre le background légèrement transparent*/
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: disappear 0.5s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-    transform-origin: top;
+    animation: disappear 0.5s; /*pour qu'il disparaisse en 0.5s*/
+    animation-delay: 2s; /* pour qu'il tourne pdt 2s*/
+    animation-fill-mode: forwards; /*pour qu'il revienne à la page d'accueil */
+    transform-origin: top; /* pour commencer en haut de la page*/
 &__dot1{
     @include loader_dots;
     background: $primary;
@@ -28,10 +29,11 @@
     animation-delay: 0.3s;
     }
 }
-
+/*header de la page principale avec juste le logo*/
 header{
     @include header;
  }
+ /*partie avec les explications de la page */
 .reservation{
     background-color: $bg-reservation;
     text-align: center; 
@@ -51,6 +53,7 @@ header{
         }
     }
 }
+/* étapes de fonctionnement du site */
 .fonctionnement{
     padding-top: 40px;
     &__title{
@@ -79,20 +82,20 @@ header{
             }
         }
     }
-    &__number{
+    &__number{ /* les nombres entourés des étapes*/
         border:1px solid $primary ;
         background-color: $primary;
         color: white;
-        margin-left: -15px;
+        margin-left: -15px; /*position à cheval sur border*/
         border-radius: 100px;
         padding:2px 8px;
     }
 }
-
+/* les icones de la liste de la partie fonctionnement*/
 .fa-list-dots,.fa-mobile-screen-button,.fa-store{
     color: grey;
 }
-
+/*partie avec les card des restaurants*/
 .restaurants{
     &__cards, a{
         @include flex_column;
@@ -135,8 +138,9 @@ header{
         color: black;
         border-radius: 0px 0px 20px 20px;
     } 
-    
 }
+
+/*footer de la page principale*/
 .footer{
     @include footer;
     @include tablette;

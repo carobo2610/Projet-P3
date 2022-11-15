@@ -1,20 +1,23 @@
+/* partie localisation inactive dans cette version*/
+
 .location{
     background-color:rgba($color: $bg-location, $alpha: 1.0);
     @include flexbox_center;
     padding: 15px;
-   
 }
+
 .fa-location-dot{
     background-color:$bg-location;
 }
+
 .location, #location__search, #location__form{
     border: none;
     background-color:none;
     height: 18px;
     padding-left: 8px;
     background-color:$bg-location;
-    }    
-/* mettre en form scss*/
+}  
+
 input::placeholder{
     color: black;
     padding-left: 10px;

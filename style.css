@@ -136,6 +136,7 @@ i {
     width: 350px;
   }
 }
+/* partie localisation inactive dans cette version*/
 .location {
   background-color: #cbc6c6;
   display: flex;
@@ -163,20 +164,21 @@ input::placeholder {
   font-size: 18px;
 }
 
+/*page principale*/
 .loader {
   position: fixed;
-  z-index: 20;
-  inset: 0;
+  z-index: 20; /* index élevé pour être sur qu'il recouve tous les éléments de la pages*/
+  inset: 0; /* pour partir de tous les bords de la page sans margin*/
   background: white;
-  height: 100vh;
-  opacity: 0.9;
+  height: 100vh; /* pour qu'il prenne toute la hauteur de la page*/
+  opacity: 0.9; /* rendre le background légèrement transparent*/
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: disappear 0.5s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  transform-origin: top;
+  animation: disappear 0.5s; /*pour qu'il disparaisse en 0.5s*/
+  animation-delay: 2s; /* pour qu'il tourne pdt 2s*/
+  animation-fill-mode: forwards; /*pour qu'il revienne à la page d'accueil */
+  transform-origin: top; /* pour commencer en haut de la page*/
 }
 .loader__dot1 {
   width: 50px;
@@ -206,6 +208,7 @@ input::placeholder {
   animation-delay: 0.3s;
 }
 
+/*header de la page principale avec juste le logo*/
 header {
   background-color: white;
   padding: 5px 0px;
@@ -223,6 +226,7 @@ header .header h1 {
   color: black;
 }
 
+/*partie avec les explications de la page */
 .reservation {
   background-color: #ecedf1;
   text-align: center;
@@ -253,6 +257,7 @@ header .header h1 {
   box-shadow: 0px 10px 10px 0px rgba(79, 78, 78, 0.6);
 }
 
+/* étapes de fonctionnement du site */
 .fonctionnement {
   padding-top: 40px;
 }
@@ -293,19 +298,21 @@ header .header h1 {
 .fonctionnement__step:hover .fa-list-dots, .fonctionnement__step:hover .fa-mobile-screen-button, .fonctionnement__step:hover .fa-store {
   color: #9356DC;
 }
-.fonctionnement__number {
+.fonctionnement__number { /* les nombres entourés des étapes*/
   border: 1px solid #9356DC;
   background-color: #9356DC;
   color: white;
-  margin-left: -15px;
+  margin-left: -15px; /*position à cheval sur border*/
   border-radius: 100px;
   padding: 2px 8px;
 }
 
+/* les icones de la liste de la partie fonctionnement*/
 .fa-list-dots, .fa-mobile-screen-button, .fa-store {
   color: grey;
 }
 
+/*partie avec les card des restaurants*/
 .restaurants__cards, .restaurants a {
   display: flex;
   flex-direction: column;
@@ -362,6 +369,7 @@ header .header h1 {
   border-radius: 0px 0px 20px 20px;
 }
 
+/*footer de la page principale*/
 .footer {
   color: white;
   background-color: rgb(78, 75, 75);
@@ -402,6 +410,7 @@ header .header h1 {
   }
 }
 
+/*scss pour les pages des cartes des restaurants*/
 .header {
   position: relative;
   z-index: 10;
@@ -437,7 +446,7 @@ header .header h1 {
   background-color: rgb(244, 241, 241);
   padding-bottom: 25px;
 }
-.restaurant__title {
+.restaurant__title { /*nom du restaurant*/
   font-family: "Shrikhand", sans-serif;
   font-size: 26px;
   position: relative;
@@ -445,7 +454,7 @@ header .header h1 {
   background-color: rgb(244, 241, 241);
   border-radius: 30px 30px 0px 0px;
   padding: 0px 20px;
-  margin-top: -50px;
+  margin-top: -50px; /*pour remonter sur la photo*/
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -473,13 +482,13 @@ header .header h1 {
   cursor: pointer;
   margin-right: 20px;
   font-size: 25px;
-  background-clip: text;
   color: rgb(244, 241, 241);
   filter: drop-shadow(0px 0px 1px black);
 }
 
 .fa-heart:hover {
   background-clip: text;
+  -webkit-background-clip: text;
   background-image: linear-gradient(#ff79da, #9356dc);
   color: transparent;
   transition: 0.5s;
@@ -497,6 +506,7 @@ header .header h1 {
   font-size: 20px;
 }
 
+/*les choix des menus */
 .starters, .deserts, .maincourse {
   display: flex;
   flex-direction: column;
@@ -504,7 +514,7 @@ header .header h1 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.starters__title, .deserts__title, .maincourse__title {
+.starters__title, .deserts__title, .maincourse__title { /* les noms entrées, plats, desserts*/
   padding: 30px 0px 0px 0px;
   color: grey;
   text-transform: uppercase;
@@ -514,7 +524,7 @@ header .header h1 {
   height: 3px;
   background-color: #99E2D0;
 }
-.starters__choice, .deserts__choice, .maincourse__choice {
+.starters__choice, .deserts__choice, .maincourse__choice { /*l'encadré de choix */
   /*faire les ... sur les textes*/
   overflow: hidden;
   white-space: nowrap;
@@ -543,7 +553,7 @@ header .header h1 {
 .starters__choice:nth-child(5), .deserts__choice:nth-child(5), .maincourse__choice:nth-child(5) {
   animation-delay: 500ms;
 }
-.starters__choice--infos, .deserts__choice--infos, .maincourse__choice--infos {
+.starters__choice--infos, .deserts__choice--infos, .maincourse__choice--infos { /* noms des plats et prix */
   padding: 10px 0px 10px 20px;
   /*faire les ... sur les textes*/
   overflow: hidden;
@@ -563,7 +573,7 @@ header .header h1 {
   padding-bottom: 15px;
   padding-left: 10px;
 }
-.starters__choice--check, .deserts__choice--check, .maincourse__choice--check {
+.starters__choice--check, .deserts__choice--check, .maincourse__choice--check { /*animation de check */
   flex-shrink: 0;
   background-color: #99E2D0;
   margin-right: -70px; /*pour qu'il sorte du champ*/
@@ -577,6 +587,7 @@ header .header h1 {
   border-radius: 0 14px 14px 0;
   transition: margin-right 0.5s;
 }
+.starters__choice:hover, .deserts__choice:hover, .maincourse__choice:hover { /* pour que l'animation arrive de la droite*/ }
 .starters__choice:hover .starters__choice--check,
 .starters__choice:hover .maincourse__choice--check,
 .starters__choice:hover .deserts__choice--check, .deserts__choice:hover .starters__choice--check,
@@ -587,7 +598,7 @@ header .header h1 {
   cursor: pointer;
   margin-right: 0px;
 }
-.starters__choice:hover .fa-check, .deserts__choice:hover .fa-check, .maincourse__choice:hover .fa-check {
+.starters__choice:hover .fa-check, .deserts__choice:hover .fa-check, .maincourse__choice:hover .fa-check { /* pour que le check tourne*/
   animation: checkspin 0.5s ease;
 }
 
@@ -596,6 +607,7 @@ header .header h1 {
   padding-left: 30px;
 }
 
+/*bouton commander sur le menu*/
 .command {
   display: flex;
   margin: auto;
@@ -615,6 +627,7 @@ header .header h1 {
   box-shadow: 0px 10px 10px 0px rgba(79, 78, 78, 0.6);
 }
 
+/*mise en page du footer des pages des restaurants*/
 .footer {
   color: white;
   background-color: rgb(78, 75, 75);
