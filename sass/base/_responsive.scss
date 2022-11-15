@@ -20,7 +20,8 @@ and (max-width: map-get($breakpoints,tablette)){
     &__choice{
     width: 350px;
     }
-}}
+}
+}
 
 @media screen and (min-width: map-get($breakpoints,tablette)){
 .starters, .deserts, .maincourse{

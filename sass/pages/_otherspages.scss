@@ -20,7 +20,7 @@
 .restaurant{
     background-color: $bg-main;
     padding-bottom: 25px;
-    &__title{
+    &__title{ /*nom du restaurant*/
     font-family: 'Shrikhand', sans-serif;
     font-size: 26px;
     position: relative;
@@ -28,11 +28,11 @@
     background-color: $bg-main;
     border-radius: 30px 30px 0px 0px;
     padding: 0px 20px;
-    margin-top: -50px;
+    margin-top: -50px; /*pour remonter sur la photo*/
     @include restaurants_name;
     }
 }    
-    
+/*organisation des 3 parties entrées,plats, desserts */ 
 .menu{
     display: flex;
     flex-direction: column;
@@ -68,12 +68,12 @@
     margin: auto;
     font-size: 20px;
 }
-
+/*les choix des menus */
 .starters, .deserts, .maincourse{
     @include flex_column;
     text-overflow: ellipsis;
     white-space: nowrap;
-    &__title{
+    &__title{ /* les noms entrées, plats, desserts*/
         padding: 30px 0px 0px 0px;
         color: grey;
         text-transform: uppercase;
@@ -83,7 +83,7 @@
             background-color: $tertiary;
             }
     }
-    &__choice{
+    &__choice{ /*l'encadré de choix */
         @include ckeck-ellipsis;
         @include menu_choices_display;
         @include border-box;
@@ -93,7 +93,7 @@
                 animation-delay: 100ms *$i;
             }
         }
-        &--infos{
+        &--infos{ /* noms des plats et prix */
             padding:10px 0px 10px 20px;
             @include ckeck-ellipsis;
         }
@@ -103,7 +103,7 @@
         &--price{
             @include prices; 
         }
-        &--check{
+        &--check{   /*animation de check */
             flex-shrink: 0;
             background-color: $tertiary;
             margin-right: -70px; /*pour qu'il sorte du champ*/
@@ -117,14 +117,14 @@
             border-radius: 0 14px 14px 0;
             transition: margin-right 0.5s;
         }
-        &:hover{
+        &:hover{ /* pour que l'animation arrive de la droite*/
             .starters__choice--check,
             .maincourse__choice--check, 
             .deserts__choice--check{
             cursor: pointer;
             margin-right: 0px;
             }
-            .fa-check{
+            .fa-check{ /* pour que le check tourne*/
                 animation: checkspin 0.5s ease;
             }
         }
@@ -135,7 +135,7 @@
 .maincourse__title{
     padding-left: 30px; 
 }
-
+/*bouton commander sur le menu*/
 .command{
     display: flex;
     margin:auto;
@@ -144,7 +144,7 @@
         @include buttons_hover;
     }
 }
-
+/*mise en page du footer des pages des restaurants*/
 .footer{
     @include footer;
     @include tablette;

@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
 }
+
 @mixin header{
     background-color: white;
     padding: 5px 0px;
@@ -14,9 +15,10 @@
             display: flex;
             align-items: center;
             color: black;
-            }
+        }
     }
 }
+
 @mixin restaurants_name{
     display: flex;
     flex-direction: row;
@@ -24,6 +26,7 @@
     justify-content: space-between;
     padding-top: 20px;
 }
+
 @mixin border-box{
     border: 1px solid rgb(239, 235, 235);
     box-shadow:1px 5px 3px 0px rgb(200, 194, 194);
@@ -41,27 +44,32 @@
     color: white;
     font-weight: bold;
 }
+
 @mixin buttons_hover{
     cursor: pointer;
     opacity: 0.8;
     transition: 0.3s;
     box-shadow:0px 10px 10px 0px rgba($color: #4f4e4e, $alpha: 0.6);
 }
+
 @mixin text_page{
     text-decoration: none;
     color: black;
     background-color: $bg-main;
 }
+
 @mixin flex_column{
     display: flex;
     flex-direction: column;
     gap: 15px 20px;
 }
+
 @mixin menu_choices_display{
     display: flex;
     flex-direction: row;
     position:relative;
 }
+
 @mixin prices{
     display: flex;
     align-items: flex-end;
@@ -69,7 +77,9 @@
     padding-bottom: 15px;
     padding-left: 10px;
 }
-@mixin ckeck-ellipsis{   /*faire les ... sur les textes*/
+
+ /*faire les ... sur les textes*/
+@mixin ckeck-ellipsis{  
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -115,9 +125,7 @@ $breakpoints:(
     tablette: 992px,
     desktop: 1200px);
 
-/*
-pour la partie steps fonctionnement du main */
-
+/*responsive */
 @mixin tablette{
     @media screen and (min-width: map-get($breakpoints,mobile)){
         flex-direction: row;  
@@ -127,6 +135,7 @@ pour la partie steps fonctionnement du main */
         max-width: 1440px;
     }
 }
+
 @mixin cards{
     @media screen and (min-width: map-get($breakpoints,mobile)){
         flex-direction: row;  
@@ -156,7 +165,7 @@ pour la partie steps fonctionnement du main */
     }
 }
 
-/*animations*/
+/*animations apparition des parties des menus*/
 @keyframes appear{
  0%{
     transform: scale(0);
@@ -165,7 +174,7 @@ pour la partie steps fonctionnement du main */
     transform: scale(1);
  }
 }
-
+/*animation pour coche verte qui tourne*/
 @keyframes checkspin{
     0% { transform: rotate(-270deg);
     }
@@ -173,6 +182,7 @@ pour la partie steps fonctionnement du main */
         transform: rotate(0);
     }
 }
+/*animation pour dots du loader*/
 @keyframes loader{
     100%{
         transform: translateY(-50px);
