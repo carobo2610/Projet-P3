@@ -9,24 +9,25 @@
 .restaurant__title, p{
    margin: auto;
 }
+.fonctionnement__steps {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 80px;
+    max-width: 1440px;
+}
+.menu{
+    align-items: center;  
+}
 }
 
-@media screen and (min-width: map-get($breakpoints,mobile)) 
-and (max-width: map-get($breakpoints,tablette)){
+@media screen and (min-width: map-get($breakpoints,mobile)){
 .restaurants__card{
     height: 263px;
 }
 .starters, .deserts, .maincourse{
     &__choice{
-    width: 350px;
+    width: 620px;
     }
 }
 }
 
-@media screen and (min-width: map-get($breakpoints,tablette)){
-.starters, .deserts, .maincourse{
-    &__choice{
-    width: 350px;
-    }
-}
-}

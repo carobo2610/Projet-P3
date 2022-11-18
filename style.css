@@ -1,7 +1,7 @@
 @charset "UTF-8";
+/*faire les ... sur les textes*/
 /*maps pour les breakpoints*/
-/*
-pour la partie steps fonctionnement du main */
+/*responsive */
 /*animation loader de chargement de la page*/
 /*pour faire disparaitre le loader*/
 @keyframes disappear {
@@ -12,7 +12,7 @@ pour la partie steps fonctionnement du main */
     transform: scale(0);
   }
 }
-/*animations*/
+/*animations apparition des parties des menus*/
 @keyframes appear {
   0% {
     transform: scale(0);
@@ -21,6 +21,7 @@ pour la partie steps fonctionnement du main */
     transform: scale(1);
   }
 }
+/*animation pour coche verte qui tourne*/
 @keyframes checkspin {
   0% {
     transform: rotate(-270deg);
@@ -29,6 +30,7 @@ pour la partie steps fonctionnement du main */
     transform: rotate(0);
   }
 }
+/*animation pour dots du loader*/
 @keyframes loader {
   100% {
     transform: translateY(-50px);
@@ -72,10 +74,10 @@ body {
 }
 @media screen and (min-width: 768px) {
   body {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    padding-bottom: 20px;
     max-width: 1440px;
   }
 }
@@ -100,10 +102,6 @@ body {
   align-items: center;
 }
 
-i {
-  background-color: none;
-}
-
 /*taille des images des restaurants*/
 .image_palette, .image_enchantee, .image_delice, .image_francaise {
   width: 100%;
@@ -122,18 +120,22 @@ i {
   .restaurant__title, p {
     margin: auto;
   }
+  .fonctionnement__steps {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 80px;
+    max-width: 1440px;
+  }
+  .menu {
+    align-items: center;
+  }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) {
   .restaurants__card {
     height: 263px;
   }
   .starters__choice, .deserts__choice, .maincourse__choice {
-    width: 350px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .starters__choice, .deserts__choice, .maincourse__choice {
-    width: 350px;
+    width: 620px;
   }
 }
 /* partie localisation inactive dans cette version*/
@@ -151,13 +153,11 @@ i {
 
 .location, #location__search, #location__form {
   border: none;
-  background-color: none;
   height: 18px;
   padding-left: 8px;
   background-color: #cbc6c6;
 }
 
-/* mettre en form scss*/
 input::placeholder {
   color: black;
   padding-left: 10px;
@@ -269,15 +269,6 @@ header .header h1 {
   flex-direction: column;
   margin: 40px 0px;
 }
-@media screen and (min-width: 768px) {
-  .fonctionnement__steps {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1440px;
-  }
-}
 .fonctionnement__step {
   display: flex;
   align-items: center;
@@ -343,7 +334,7 @@ header .header h1 {
   position: relative;
   object-fit: cover;
   z-index: 10;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
 }
 .restaurants__maj {
   border: 1px solid #99E2D0;
@@ -402,10 +393,10 @@ header .header h1 {
 }
 @media screen and (min-width: 768px) {
   .footer {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    padding-bottom: 20px;
     max-width: 1440px;
   }
 }
@@ -462,19 +453,11 @@ header .header h1 {
   padding-top: 20px;
 }
 
+/*organisation des 3 parties entrées,plats, desserts */
 .menu {
   display: flex;
   flex-direction: column;
   padding: 0px 20px;
-}
-@media screen and (min-width: 768px) {
-  .menu {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1440px;
-  }
 }
 
 /*le coeur*/
@@ -525,7 +508,6 @@ header .header h1 {
   background-color: #99E2D0;
 }
 .starters__choice, .deserts__choice, .maincourse__choice { /*l'encadré de choix */
-  /*faire les ... sur les textes*/
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -555,13 +537,11 @@ header .header h1 {
 }
 .starters__choice--infos, .deserts__choice--infos, .maincourse__choice--infos { /* noms des plats et prix */
   padding: 10px 0px 10px 20px;
-  /*faire les ... sur les textes*/
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .starters__choice--name, .starters__choice--descr, .deserts__choice--name, .deserts__choice--descr, .maincourse__choice--name, .maincourse__choice--descr {
-  /*faire les ... sur les textes*/
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -660,10 +640,10 @@ header .header h1 {
 }
 @media screen and (min-width: 768px) {
   .footer {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    padding-bottom: 20px;
     max-width: 1440px;
   }
 }
